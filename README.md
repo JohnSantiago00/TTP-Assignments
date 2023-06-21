@@ -1,6 +1,6 @@
 # TTP-Assignments
 
-Welcome to the TTP-Assignments repository! This repository is dedicated to storing all the assignments completed during the Full Stack Coding Bootcamp at TTP (Tech Talent Pipeline). It serves as a centralized location to showcase my progress and growth as a developer throughout the bootcamp.
+Welcome to my TTP-Assignments repository! This repository is dedicated to storing all the assignments completed during the Full Stack Coding Bootcamp at TTP (Tech Talent Pipeline). It serves as a centralized location to showcase my progress and growth as a developer throughout the bootcamp.
 
 ## Table of Contents
 
