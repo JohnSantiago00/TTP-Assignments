@@ -1,0 +1,15 @@
+{
+  "name": "ttp-assignment3",
+  "version": "1.0.0",
+  "description": "TTP-Assignment3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
