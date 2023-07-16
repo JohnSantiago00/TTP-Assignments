@@ -43,7 +43,9 @@ npm start
 
 ## Postman Collection
 
-You can find the Postman collection for this project [here](./blogging-platform-DB/blogging-api/Blog%20Platform.postman_collection.json).
+You can find the Postman collection for this project [here]
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/28377473-42c9511e-163e-446c-9163-e3d2b4ac2ec7?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D28377473-42c9511e-163e-446c-9163-e3d2b4ac2ec7%26entityType%3Dcollection%26workspaceId%3Dbc9c7fa7-6886-4ece-a405-288d44eb1203)
 
 ## Usage
 
