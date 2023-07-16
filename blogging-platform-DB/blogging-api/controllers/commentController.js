@@ -1,5 +1,3 @@
-// CommentController.js
-
 const Comment = require("../models/Comment");
 
 const CommentController = {
@@ -32,37 +30,31 @@ const CommentController = {
     }
   },
 
-  getCommentById: async (req, res) => {
-    const targetPostId = parseInt(req.params.postId, 10);
-    const targetCommentId = parseInt(req.params.commentId, 10);
-
+  getAllComments: async (req, res) => {
     try {
-      const targetComment = await Comment.findOne({
-        where: { id: targetCommentId, PostId: targetPostId },
+      const comments = await Comment.findAll({
+        include: "User",
       });
-
-      if (targetComment) {
-        res.status(200).json(targetComment);
-      } else {
-        res.status(404).json({ message: "No comment found." });
-      }
-    } catch (err) {
-      console.log(err);
-      res.status(500).send({ message: err.message });
+      res.json({ comments });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal server error" });
     }
+  },
 
-    // try {
-    //   const { commentId } = req.params;
-    //   const comment = await Comment.findByPk(commentId, { include: "User" });
-    //   if (comment) {
-    //     res.json({ comment });
-    //   } else {
-    //     res.status(404).json({ message: "Comment not found" });
-    //   }
-    // } catch (error) {
-    //   console.error(error);
-    //   res.status(500).json({ message: "Internal server error" });
-    // }
+  getCommentById: async (req, res) => {
+    try {
+      const { postId, commentId } = req.params;
+      const comment = await Comment.findByPk(commentId, { include: "User" });
+      if (comment) {
+        res.json({ comment });
+      } else {
+        res.status(404).json({ message: "Comment not found" });
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal server error" });
+    }
   },
 
   updateComment: async (req, res) => {
