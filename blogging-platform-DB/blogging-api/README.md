@@ -41,6 +41,10 @@ npm install
 npm start
 ```
 
+## Postman Collection
+
+You can find the Postman collection for this project [here](blogging-platform-DB/blogging-api/Blog Platform.postman_collection.json).
+
 ## Usage
 
 Once the application is running, you can interact with it using an API client such as Postman. Here are some example API requests:
