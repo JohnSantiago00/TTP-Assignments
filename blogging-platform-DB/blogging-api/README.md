@@ -43,7 +43,7 @@ npm start
 
 ## Postman Collection
 
-You can find the Postman collection for this project [here](blogging-platform-DB/blogging-api/Blog Platform.postman_collection.json).
+You can find the Postman collection for this project [here](./blogging-platform-DB/blogging-api/Blog%20Platform.postman_collection.json).
 
 ## Usage
 
