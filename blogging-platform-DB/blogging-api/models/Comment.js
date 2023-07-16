@@ -17,10 +17,10 @@ const Comment = sequelize.define("Comment", {
   },
 });
 
-Comment.belongsTo(User); // A Comment belongs to a User
-User.hasMany(Comment); // A User can have multiple Comments
+Comment.belongsTo(User);
+User.hasMany(Comment);
 
-Comment.belongsTo(Post); // A Comment belongs to a Post
-Post.hasMany(Comment); // A Post can have multiple Comments
+Comment.belongsTo(Post);
+Post.hasMany(Comment);
 
 module.exports = Comment;

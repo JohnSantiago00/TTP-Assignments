@@ -1,5 +1,3 @@
-// UserController.js
-
 const bcrypt = require("bcrypt");
 
 const User = require("../models/User");
@@ -9,14 +7,12 @@ const UserController = {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
     try {
-      // Create a new user with the hashed password
       const newUser = await User.create({
         name: req.body.name,
-        email: req.body.email, // Include email property
+        email: req.body.email,
         password: hashedPassword,
       });
 
-      // Send a cookie to the client
       req.session.userId = newUser.id;
 
       res.status(201).json({
@@ -34,17 +30,6 @@ const UserController = {
         error: err,
       });
     }
-
-    // res.send("Welcome to the Job App Tracker API!!!!");
-    // try {
-    //   const { name, email, password } = req.body; // Add email to the destructuring assignment
-    //   const hashedPassword = await bcrypt.hash(password, 10);
-    //   const user = await User.create({ name, email, password: hashedPassword }); // Include email property
-    //   res.json({ message: "User registered successfully", user });
-    // } catch (error) {
-    //   console.error(error);
-    //   res.status(500).json({ message: "Internal server error" });
-    // }
   },
 
   login: async (req, res) => {
@@ -54,7 +39,7 @@ const UserController = {
       console.log("password:", password);
 
       const user = await User.findOne({ where: { name } });
-      // console.log(user);
+
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }

@@ -4,7 +4,6 @@ const bcrypt = require("bcryptjs");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // Insert users
     const usersData = [
       {
         name: "John Doe",
@@ -28,7 +27,6 @@ module.exports = {
 
     const userIds = insertedUsers.map((user) => user.id);
 
-    // Insert posts
     const postsData = [
       {
         title: "First Post",
@@ -52,7 +50,6 @@ module.exports = {
 
     const postIds = insertedPosts.map((post) => post.id);
 
-    // Insert comments
     const commentsData = [
       {
         text: "First comment on first post",

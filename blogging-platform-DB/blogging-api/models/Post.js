@@ -1,5 +1,3 @@
-// Post.js
-
 const { DataTypes } = require("sequelize");
 const sequelize = require("../database");
 const User = require("./User");
@@ -20,7 +18,7 @@ const Post = sequelize.define("Post", {
   },
 });
 
-Post.belongsTo(User); // A Post belongs to a User
-User.hasMany(Post); // A User can have multiple Posts
+Post.belongsTo(User);
+User.hasMany(Post);
 
 module.exports = Post;

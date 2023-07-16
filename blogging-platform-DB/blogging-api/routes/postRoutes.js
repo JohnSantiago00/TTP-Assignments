@@ -1,5 +1,3 @@
-// postRoutes.js
-
 const express = require("express");
 const PostController = require("../controllers/PostController");
 const { authenticateUser } = require("../middleware/authMiddleware");
