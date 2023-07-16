@@ -57,7 +57,7 @@ Once the application is running, you can interact with it using an API client su
 - Get all posts:  
   `GET` - /posts
 - Add a comment to a post:  
-  `POST` - /api/comments  
+  `POST` - /comments  
   Request Body: { "postId": "1", "text": "Great post!" }
 - Get comments for a specific post:  
   `GET` - /comments/:postId
