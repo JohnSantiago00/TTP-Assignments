@@ -51,8 +51,8 @@ You can find the Postman collection for this project here:
 
 Once the application is running, you can interact with it using an API client such as Postman. Here are some example API requests:
 
-- Create a new post:
-  POST /posts
+- Create a new post:  
+  POST /posts  
   Request Body: { "title": "My First Post", "content": "Hello, world!" }
 - Get all posts:
   GET /posts
@@ -69,7 +69,7 @@ Please refer to the API Routes section below for a complete list of available ro
 The Blogging Platform provides the following API routes:
 
 - `/posts`
-- `GET` - Get all posts
+  `GET` - Get all posts
 - `POST` - Create a new post
 
 - `/comments/:postId`
