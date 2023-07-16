@@ -52,15 +52,15 @@ You can find the Postman collection for this project here:
 Once the application is running, you can interact with it using an API client such as Postman. Here are some example API requests:
 
 - Create a new post:  
-  POST /posts  
+  `POST` - /posts  
   Request Body: { "title": "My First Post", "content": "Hello, world!" }
-- Get all posts:
-  GET /posts
-- Add a comment to a post:
-  POST /api/comments
+- Get all posts:  
+  `GET` - /posts
+- Add a comment to a post:  
+  `POST` - /api/comments  
   Request Body: { "postId": "1", "text": "Great post!" }
-- Get comments for a specific post:
-  GET /comments/:postId
+- Get comments for a specific post:  
+  `GET` - /comments/:postId
 
 Please refer to the API Routes section below for a complete list of available routes and their descriptions.
 
@@ -68,18 +68,10 @@ Please refer to the API Routes section below for a complete list of available ro
 
 The Blogging Platform provides the following API routes:
 
-- `/posts`
-  `GET` - Get all posts
-- `POST` - Create a new post
-
-- `/comments/:postId`
-- `GET` - Get comments for a specific post
-- `POST` - Add a comment to a post
-
-- `/comments/:commentId`
-- `GET` - Get a specific comment by ID
-- `PUT` - Update a comment
-- `DELETE` - Delete a comment
+- `GET` - Get a all post || by id
+- `POST` - Create a new post/comment
+- `PATCH` - Update a post/comment
+- `DELETE` - Delete a post/comment
 
 Please note that some routes require authentication. You need to include an authentication token in the request headers to access these routes.
 
