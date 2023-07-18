@@ -5,21 +5,6 @@ const User = require("../models/User");
 
 const userRouter = Router();
 
-// userRouter.get("/current_user", async (req, res) => {
-//   if (req.session.userId) {
-//     const user = await User.findByPk(req.session.userId);
-//     return res.status(200).json({
-//       user: {
-//         id: user.id,
-//         name: user.name,
-//         email: user.email,
-//       },
-//     });
-//   } else {
-//     return res.status(401).json({ user: null });
-//   }
-// });
-
 const UserController = {
   register: async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);

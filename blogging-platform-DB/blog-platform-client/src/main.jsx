@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import AuthProvider from "./contexts/AuthContext";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import AuthProvider from "./contexts/AuthContext";
+import "./index.css";
 import ProtectedRoute from "./routes/ProtectedRoute";
-import Login, { action as LoginAction } from "./components/Login";
-import Signup, { action as SignupAction } from "./components/Signup";
-import Root, {
-  loader as RootLoader,
-  action as LogoutAction,
-} from "./routes/Root";
+import Root from "./routes/root";
 
 const router = createBrowserRouter([
   {
@@ -21,20 +18,16 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     errorElement: <ErrorPage />,
-    loader: RootLoader,
-    action: LogoutAction,
   },
   {
     path: "/login",
     element: <Login />,
     errorElement: <ErrorPage />,
-    action: LoginAction,
   },
   {
     path: "/signup",
     element: <Signup />,
     errorElement: <ErrorPage />,
-    action: SignupAction,
   },
 ]);
 
