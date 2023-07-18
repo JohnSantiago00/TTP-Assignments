@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
 const commentRoutes = require("./routes/commentRoutes");
@@ -10,13 +11,17 @@ const port = 4000;
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors()); // Add this line
 app.use(cookieParser());
+
 app.use(
   session({
-    secret: "your_secret_key",
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 3600000, // 1 hour
+    },
   })
 );
 
