@@ -20,9 +20,9 @@ app.use(
   })
 );
 
-app.use("/users", userRoutes);
-app.use("/posts", authenticateUser, postRoutes);
-app.use("/comments", authenticateUser, commentRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/posts", authenticateUser, postRoutes);
+app.use("/api/comments", authenticateUser, commentRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);

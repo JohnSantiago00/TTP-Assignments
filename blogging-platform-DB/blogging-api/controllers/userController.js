@@ -34,11 +34,11 @@ const UserController = {
 
   login: async (req, res) => {
     try {
-      const { name, password } = req.body;
-      console.log("name:", name);
+      const { email, password } = req.body; // Change `name` to `email`
+      console.log("email:", email);
       console.log("password:", password);
 
-      const user = await User.findOne({ where: { name } });
+      const user = await User.findOne({ where: { email } }); // Change `name` to `email`
 
       if (!user) {
         return res.status(404).json({ message: "User not found" });
